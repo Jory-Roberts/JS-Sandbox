@@ -182,3 +182,5 @@ console.log(amazonEmployee.alive);
 console.log(amazonEmployee['beverage'].morning);
 console.log(amazonEmployee['hobbies'][0]);
 console.log(amazonEmployee.action());
+
+console.log('me');
