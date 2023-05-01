@@ -233,3 +233,8 @@ console.log(drums);
 const sings = ({ vocals }) => `${vocals} sings!`;
 
 console.log(sings(band));
+console.clear();
+console.log('sandbox js is running');
+fetch('http://localhost:3000/ingredients')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
