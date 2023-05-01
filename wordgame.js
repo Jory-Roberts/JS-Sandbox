@@ -1,7 +1,7 @@
 const tileDisplay = document.querySelector('.tile-container');
-console.log(tiles);
+console.log(tileDisplay);
 const keyboard = document.querySelector('.key-container');
-console.log(keys);
+console.log(keyboard);
 
 const keys = [
     'Q',
@@ -33,3 +33,4 @@ const keys = [
     'M',
     '<',
 ];
+console.log(keys);
