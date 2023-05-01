@@ -183,4 +183,57 @@ console.log(amazonEmployee['beverage'].morning);
 console.log(amazonEmployee['hobbies'][0]);
 console.log(amazonEmployee.action());
 
-console.log('me');
+//Object with Inheritance
+const vehicle = {
+    wheels: 4,
+    engine: function () {
+        return 'vrooom';
+    },
+};
+
+const truck = Object.create(vehicle);
+truck.doors = 2;
+console.log(truck);
+console.log(truck.wheels);
+console.log(truck.engine);
+
+const car = Object.create(vehicle);
+car.doors = 4;
+car.engine = function () {
+    return 'starting up';
+};
+console.log(car.engine());
+
+const tesla = Object.create(car);
+console.log(tesla.wheels);
+tesla.engine = function () {
+    return 'can you even hear me?';
+};
+console.log(tesla.engine());
+
+const band = {
+    vocals: 'Robert Plant',
+    guitar: 'Jimmy Page',
+    bass: 'John Paul Jones',
+    drums: 'John Bonham',
+};
+
+console.log(Object.keys(band));
+console.log(Object.values(band));
+
+//For In Loop
+
+for (let job in band) {
+    console.log(`On ${job}, it's ${band[job]}`);
+}
+
+//Destructuring Objects
+
+const { vocals, guitar, bass, drums } = band;
+console.log(guitar);
+console.log(vocals);
+console.log(drums);
+
+const sings = ({ vocals }) => `${vocals} sings!`;
+
+console.log(sings(band));
