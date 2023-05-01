@@ -168,7 +168,7 @@ const amazonEmployee = {
     occupation: 'Aspiring Software Engineer',
     age: '35',
     alive: true,
-    hobbies: ['PlayStation 5', 'Swearing', 'Helping friends'],
+    hobbies: ['PlayStation 5', 'Going to the gym', 'Helping friends'],
     beverage: {
         morning: 'peach redbull',
         afternoon: 'workout shake',
