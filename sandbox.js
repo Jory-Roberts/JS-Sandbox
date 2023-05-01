@@ -106,18 +106,14 @@ nums.forEach((number) => {
 //Filter()
 console.log('\n');
 console.log('Filter');
-const numberFilter = nums.filter((numbers) => {
-    return numbers === 9;
-});
+const numberFilter = nums.filter((numbers) => numbers === 9);
 
 console.log(numberFilter);
 
 //Map()
 console.log('\n');
 console.log('Map');
-const numberMap = numberFilter.map((numbers) => {
-    return numbers * 2;
-});
+const numberMap = numberFilter.map((numbers) => numbers * 2);
 
 console.log(numberMap);
 console.log('\n');
