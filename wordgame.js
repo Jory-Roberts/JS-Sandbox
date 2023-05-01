@@ -34,3 +34,15 @@ const keys = [
     '<',
 ];
 console.log(keys);
+
+const handleClick = () => {
+    console.log('clicked');
+};
+
+keys.forEach((key) => {
+    const button = document.createElement('button');
+    button.textContent = key;
+    button.setAttribute('id', key);
+    button.addEventListener('click', handleClick);
+    keyboard.append(button);
+});
