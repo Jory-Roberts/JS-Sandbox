@@ -1,0 +1,34 @@
+{
+    "ingredients": [
+        {
+            "id": 1,
+            "name": "cheese",
+            "type": "FREE_TOPPING",
+            "description": "Finely-shredded jack cheese"
+        },
+        {
+            "id": 2,
+            "name": "chicken",
+            "type": "PROTEIN",
+            "description": "delicious plump bird"
+        },
+        {
+            "id": 3,
+            "name": "guac",
+            "type": "FREE_TOPPING",
+            "description": "green"
+        },
+        {
+            "id": 4,
+            "name": "beans",
+            "type": "FREE_TOPPING",
+            "description": "black"
+        },
+        {
+            "id": 5,
+            "name": "lettuce",
+            "type": "FREE_TOPPING",
+            "description": "this is green too"
+        }
+    ]
+}
