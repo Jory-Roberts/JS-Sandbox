@@ -3,7 +3,7 @@ console.log(tileDisplay);
 const keyboard = document.querySelector('.key-container');
 console.log(keyboard);
 
-const word = 'SUPER';
+const jordle = 'SUPER';
 
 const keys = [
     'Q',
@@ -74,14 +74,18 @@ keys.forEach((key) => {
     keyboard.append(buttonElement);
 });
 
-const handleClick = (key) => {
-    console.log('clicked', key);
-    addLetter(key);
+const handleClick = (letter) => {
+    console.log('clicked', letter);
+    addLetter(letter);
 };
 
-const addLetter = (key) => {
+const addLetter = (letter) => {
     const tile = document.getElementById(
         'guessRow- ' + currentRow + '-tile-' + currentTile
     );
-    tile.textContent = key;
+    tile.textContent = letter;
+    guessRows[currentRow][currentTile] = letter;
+    tile.setAttribute('data', letter);
+    currentTile++;
+    console.log('guessRows', guessRows);
 };
