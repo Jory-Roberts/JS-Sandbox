@@ -2,6 +2,8 @@ const tileDisplay = document.querySelector('.tile-container');
 console.log(tileDisplay);
 const keyboard = document.querySelector('.key-container');
 console.log(keyboard);
+const messageDisplay = document.querySelector('.message-container');
+console.log(messageDisplay);
 
 const jordle = 'SUPER';
 
@@ -78,11 +80,14 @@ const handleClick = (letter) => {
     console.log('clicked', letter);
     if (letter === '<') {
         deleteLetter();
-        console.log('delete letter');
+        console.log('guessRows', guessRows);
         return;
     }
     if (letter === 'ENTER') {
+        checkRow();
+        console.log('clicked ENTER');
         console.log('check row');
+        console.log('guessRows', guessRows);
         return;
     }
     addLetter(letter);
@@ -97,16 +102,37 @@ const addLetter = (letter) => {
         guessRows[currentRow][currentTile] = letter;
         tile.setAttribute('data', letter);
         currentTile++;
-        console.log('guessRows', guessRows);
     }
+    console.log('guessRows', guessRows);
 };
 
 const deleteLetter = () => {
-    currentTile--;
-    const tile = document.getElementById(
-        'guessRow- ' + currentRow + '-tile-' + currentTile
-    );
-    tile.textContent = ' ';
-    guessRows[currentRow][currentTile];
-    tile.setAttribute('data', ' ');
+    if (currentTile > 0) {
+        currentTile--;
+        const tile = document.getElementById(
+            'guessRow- ' + currentRow + '-tile-' + currentTile
+        );
+        tile.textContent = ' ';
+        guessRows[currentRow][currentTile] = ' ';
+        tile.setAttribute('data', ' ');
+    }
+};
+
+const checkRow = () => {
+    const guess = guessRows[currentRow].join(' ');
+    if (currentTile === 5) {
+        console.log(`guess is ${guess} : jordle is ${jordle}`);
+        if (jordle == guess) {
+            showMessage('Wonderful!');
+            console.log(showMessage);
+            return;
+        }
+    }
+};
+
+const showMessage = (message) => {
+    const messageElement = document.createElement('p');
+    console.log(messageElement);
+    messageElement.textContent = message;
+    messageDisplay.append(messageElement);
 };
