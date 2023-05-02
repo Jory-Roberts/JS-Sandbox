@@ -56,6 +56,7 @@ guessRows.forEach((guessRow, guessRowIndex) => {
             'guessRow- ' + guessRowIndex + '-tile-' + guessIndex
         );
         rowElement.append(tileElement);
+        tileElement.classList.add('tile');
     });
     tileDisplay.append(rowElement);
 });
