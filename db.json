@@ -1,34 +1,26 @@
 {
-    "ingredients": [
+    "users": [
         {
-            "id": 1,
-            "name": "cheese",
-            "type": "FREE_TOPPING",
-            "description": "Finely-shredded jack cheese"
+            "name": "John Doe",
+            "email": "johndoe@myname.com",
+            "id": 1
         },
         {
-            "id": 2,
-            "name": "chicken",
-            "type": "PROTEIN",
-            "description": "delicious plump bird"
+            "name": "Jane Doe",
+            "email": "janedoe@myname.com",
+            "id": 2
         },
         {
-            "id": 3,
-            "name": "guac",
-            "type": "FREE_TOPPING",
-            "description": "green"
+            "name": "Billy Doe",
+            "email": "billydoe@myname.com",
+            "id": 3
         },
         {
-            "id": 4,
-            "name": "beans",
-            "type": "FREE_TOPPING",
-            "description": "black"
-        },
-        {
-            "id": 5,
-            "name": "lettuce",
-            "type": "FREE_TOPPING",
-            "description": "this is green too"
+            "name": "Jim Doe",
+            "email": "jimdoe@myname.com",
+            "age": "26",
+            "image": "https://www.istockphoto.com/photo/hands-of-owner-petting-a-dog-gm938501236-256640720",
+            "id": 4
         }
     ]
 }
